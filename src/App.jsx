@@ -12,7 +12,9 @@ function App() {
 
   const apiCall = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/wonderland");
+      const response = await axios.get(
+        "https://express-api-creation.vercel.app/"
+      );
       setCharacters(response.data);
     } catch (err) {
       setError(err);
@@ -24,13 +26,14 @@ function App() {
   const postCharacter = async (e) => {
     e.preventDefault();
     try {
-      const newCharacter = await axios.get(
-        "http://localhost:3000/api/wonderland",
+      const newCharacter = await axios.post(
+        "https://express-api-creation.vercel.app/",
         {
           name: name,
           kind: kind,
         }
       );
+      console.log(newCharacter);
     } catch (err) {
       setError(err);
     } finally {
@@ -56,7 +59,7 @@ function App() {
       {characters.map((character) => {
         return (
           <>
-            <div key={character.id}>
+            <div className="characterStyle" key={character.id}>
               <p>This is {character.name},</p>
               <p>They are a {character.kind}.</p>
             </div>
