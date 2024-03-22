@@ -1,20 +1,19 @@
 #root {
   width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
+  /* margin: 0 auto;
+  padding: 2rem; */
   text-align: center;
   align-content: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  height: fit-content;
+
   
 }
 
 body{
   background-image: url(./assets/alice-in-wonderland.jpg);
-    
     background-repeat: no-repeat;
     filter: brightness(0.7);
   filter: blur(0.1px);
@@ -25,31 +24,31 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  color: rgb(237, 85, 108);
+  color: rgb(225, 32, 61);
   border: 3px solid lightblue;
   background-color: rgb(192, 243, 243);
   width: 50%;
   margin: 20px;
   
 
-  
-
 }
 
-h2 {
-  color: rgb(5, 71, 94);
+h1 {
+  color: rgb(0, 0, 0);
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 3rem;
 }
+
+
 
 h4 {
   color: rgb(105, 82, 149);
   font-weight: 800;
   background-color: rosybrown;
-  width: fit-content;
-  border-radius: 20px;
- margin-left: 20px;
-  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+
+  padding: 15px;
   font-size: large;
 }
 
@@ -61,6 +60,7 @@ button {
   margin: 10px;
   font-size: medium;
   font-weight: 800;
+  
 
 }
 

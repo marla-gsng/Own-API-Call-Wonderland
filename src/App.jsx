@@ -1,6 +1,7 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import NavBar from "./NavBar";
 
 function App() {
   const [characters, setCharacters] = useState(null);
@@ -13,7 +14,7 @@ function App() {
   const apiCall = async () => {
     try {
       const response = await axios.get(
-        "https://express-api-creation.vercel.app/"
+        "https://express-api-creation-backend.vercel.app/api/wonderland"
       );
       setCharacters(response.data);
     } catch (err) {
@@ -27,7 +28,7 @@ function App() {
     e.preventDefault();
     try {
       const newCharacter = await axios.post(
-        "https://express-api-creation.vercel.app/",
+        "https://express-api-creation-backend.vercel.app/api/wonderland",
         {
           name: name,
           kind: kind,
@@ -54,7 +55,7 @@ function App() {
 
   return (
     <>
-      <h2>Characters in 'Alice in Wonderland'</h2>
+      <h1>Characters in 'Alice in Wonderland'</h1>
 
       {characters.map((character) => {
         return (
