@@ -1,7 +1,6 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import NavBar from "./NavBar";
 
 function App() {
   const [characters, setCharacters] = useState(null);
@@ -83,6 +82,8 @@ function App() {
             onChange={(e) => setKind(e.target.value)}
           />
           <button type="submit">Add Character</button>
+
+          <button type="delete">Delete</button>
         </form>
       </div>
     </>

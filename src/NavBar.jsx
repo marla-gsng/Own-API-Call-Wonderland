@@ -12,6 +12,9 @@ const NavBar = () => {
           <Link to="/white-rabbit">Follow the White Rabbit</Link>
         </li>
         <li>
+          <Link to="/characters/">Characters</Link>
+        </li>
+        <li>
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
